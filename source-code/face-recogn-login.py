@@ -16,15 +16,11 @@ ril = 0
 # make a login page GUI using tkinter
 class Login(tk.Tk):
     def __init__(self, *args, **kwargs):
-        # global face_cascade
-        # global labels
-        # global recognizer
         
-        # self.root = tk.Tk()
         tk.Tk.__init__(self, *args, **kwargs)
         container = tk.Frame(self)
         self.frames = {}
-    # def run(self):
+    
         container.pack(side="top", fill="both", expand=True)
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
@@ -34,7 +30,7 @@ class Login(tk.Tk):
             frame.grid(row=0, column=0, sticky="nsew")
         
         self.show_frame(LoginPage)
-        # self.root.mainloop()
+        
     
     def show_frame(self, cont):
             frame = self.frames[cont]
@@ -88,8 +84,6 @@ class LoginPage(tk.Frame):
                     else:
                         print("unknown")
 
-                    # img_item = "my-image.png"
-                    # cv2.imwrite(img_item, roi_color)
 
                     color = (255, 0, 0) #BGR and not RGB
                     stroke = 2
@@ -123,6 +117,5 @@ class PageOne(tk.Frame):
 
 
 window = Login()
-# window.run()
-# root.title("Login Page")
+window.title("Login Page")
 window.mainloop()
