@@ -66,7 +66,7 @@ class LoginPage(tk.Frame):
             try:    # Capture frame-by-frame
                 ret, frame = cap.read()
                 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-                faces = face_cascade.detectMultiScale(gray, scaleFactor=1.5, minNeighbors=5)
+                faces = face_cascade.detectMultiScale(gray, minNeighbors=5)
                 for (x, y, w, h) in faces:
                     # print(x,y,w,h)
                     roi_gray = gray[y:y+h, x:x+w]
@@ -106,14 +106,13 @@ class LoginPage(tk.Frame):
 class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        print("Hello world")
+
     
         label = tk.Label(self, text=LoginPage.name, font=("Helvetica", 18))
         label.pack(pady=10, padx=10)
+        button = tk.Button(self, text="Logout", command=lambda: controller.show_frame(LoginPage))
+        button.pack()
    
-
-
-
 
 
 window = Login()
