@@ -4,14 +4,7 @@ import pickle
 import tkinter as tk
 # from tkinter import *
 import pickle 
-
-name = ""
-ids = 1
-
-ril = 0
-
-                    
-                   
+     
     
 # make a login page GUI using tkinter
 class Login(tk.Tk):
@@ -68,7 +61,6 @@ class LoginPage(tk.Frame):
                 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 faces = face_cascade.detectMultiScale(gray, minNeighbors=5)
                 for (x, y, w, h) in faces:
-                    # print(x,y,w,h)
                     roi_gray = gray[y:y+h, x:x+w]
                     roi_color = frame[y:y+h, x:x+w]
                     id_, conf = recognizer.predict(roi_gray) 
@@ -99,8 +91,6 @@ class LoginPage(tk.Frame):
             #when everything done, release the Capture
         cap.release()
         cv2.destroyAllWindows()
-        
-    
     
 
 class PageOne(tk.Frame):
