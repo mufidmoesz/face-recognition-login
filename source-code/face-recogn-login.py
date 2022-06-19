@@ -64,7 +64,7 @@ class LoginPage(tk.Frame):
                     roi_gray = gray[y:y+h, x:x+w]
                     roi_color = frame[y:y+h, x:x+w]
                     id_, conf = recognizer.predict(roi_gray) 
-                    if conf >= 45 and conf <= 85:
+                    if conf >= 60 and conf <= 85:
                         print(id_)
                         print(labels[id_])
                         LoginPage.name = "halo"
