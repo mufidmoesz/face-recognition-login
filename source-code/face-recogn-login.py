@@ -67,8 +67,6 @@ class LoginPage(tk.Frame):
                     if conf >= 60 and conf <= 85:
                         print(id_)
                         print(labels[id_])
-                        LoginPage.name = "halo"
-                        page = PageOne(parent, controller)
                         controller.show_frame(PageOne)
                         cap.release()
                         cv2.destroyAllWindows()
@@ -97,7 +95,6 @@ class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
 
-    
         label = tk.Label(self, text=LoginPage.name, font=("Helvetica", 18))
         label.pack(pady=10, padx=10)
         button = tk.Button(self, text="Logout", command=lambda: controller.show_frame(LoginPage))
