@@ -5,7 +5,7 @@ this is a login application using face recognition. this application using Pytho
 
 ## Tugas Besar Algoritma dan Pemgraman
 
-aplikasi ini dibuat untuk memenuhi tugas besar mata kuliah Algoritma dan Pemrograman. __
-nama    : Muhammad Mufid Musyaffa __
-NIM     : 1202210281 __
-kelas   : SI-45-03 __
+aplikasi ini dibuat untuk memenuhi tugas besar mata kuliah Algoritma dan Pemrograman.  
+nama    : Muhammad Mufid Musyaffa  
+NIM     : 1202210281  
+kelas   : SI-45-03  
