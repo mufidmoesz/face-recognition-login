@@ -67,7 +67,7 @@ class LoginPage(tk.Frame):
                         print(id_)
                         print(labels[id_])
                         controller.show_frame(PageOne)
-                        label = tk.Label(controller.show_frame(PageOne), text=f"Selamat Datang {labels[id_]}", font=("Helvetica", 18))
+                        label = tk.Label(PageOne, text=f"Selamat Datang {labels[id_]}", font=("Helvetica", 18))
                         label.pack(pady=10, padx=10)
                         cap.release()
                         cv2.destroyAllWindows()
