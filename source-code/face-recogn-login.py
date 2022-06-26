@@ -31,7 +31,6 @@ class Login(tk.Tk):
 
 
 class LoginPage(tk.Frame):
-    name = "Selamat Datang"
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="Selamat Datang di Program Login Face Recognition", font=("Helvetica", 18))
@@ -67,6 +66,8 @@ class LoginPage(tk.Frame):
                     if conf >= 60 and conf <= 85:
                         print(id_)
                         print(labels[id_])
+                        label = tk.Label(controller.show_frame(PageOne), text=f"Selamat Datang {labels[id_]}", font=("Helvetica", 18))
+                        label.pack(pady=10, padx=10)
                         controller.show_frame(PageOne)
                         cap.release()
                         cv2.destroyAllWindows()
@@ -95,8 +96,6 @@ class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
 
-        label = tk.Label(self, text=LoginPage.name, font=("Helvetica", 18))
-        label.pack(pady=10, padx=10)
         button = tk.Button(self, text="Logout", command=lambda: controller.show_frame(LoginPage))
         button.pack()
    
